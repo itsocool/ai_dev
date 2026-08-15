@@ -26,14 +26,14 @@ export default function Contact() {
         </p>
 
         <a
-          href="mailto:hello@doyoon.dev"
+          href="mailto:yesicankor@gmail.com"
           className="w-max max-w-full border-b border-paper pb-[0.65rem] text-[clamp(1rem,1.55vw,1.45rem)] font-bold focus-visible:outline-paper"
         >
-          hello@doyoon.dev
+          yesicankor@gmail.com
         </a>
 
         <a
-          href="mailto:hello@doyoon.dev"
+          href="mailto:yesicankor@gmail.com"
           className="flex w-max max-w-full items-center gap-5 border-b border-paper pb-[0.65rem] text-[clamp(1rem,1.55vw,1.45rem)] font-bold focus-visible:outline-paper max-xl:col-start-3 max-md:col-start-auto"
         >
           면접 제안하기 <span aria-hidden="true" className="text-[1.75em] font-light">→</span>

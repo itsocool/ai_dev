@@ -4,9 +4,9 @@ export default function SiteHeader() {
       <a
         className="text-[clamp(1.45rem,2vw,2rem)] font-extrabold tracking-[-0.06em] max-xs:text-[1.25rem]"
         href="#main"
-        aria-label="김도윤 포트폴리오 홈"
+        aria-label="김태현 포트폴리오 홈"
       >
-        김도윤
+        김태현
       </a>
       <nav
         aria-label="주요 메뉴"

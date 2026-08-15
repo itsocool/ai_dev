@@ -31,7 +31,7 @@ export default function Hero() {
             asChild
             className={`${cta} border-signal bg-signal text-paper hover:bg-signal-dark focus-visible:border-signal`}
           >
-            <a href="mailto:hello@doyoon.dev">면접 제안하기 <span aria-hidden="true" className={arrow}>→</span></a>
+            <a href="mailto:yesicankor@gmail.com">면접 제안하기 <span aria-hidden="true" className={arrow}>→</span></a>
           </Button>
           <Button
             asChild
