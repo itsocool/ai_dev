@@ -1,5 +1,11 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8">
-<link rel="stylesheet" href="/_next/static/chunks/3pju4bmvws0hj.css">
+<script>
+  // Pull in the site is own built stylesheet so this card always uses the current
+  // tokens and typeface, whatever the content hash happens to be.
+  const r = new XMLHttpRequest();
+  r.open("GET", "/index.html", false); r.send();
+  document.write('<link rel="stylesheet" href="' + r.responseText.match(/\/_next\/static\/[^"]*\.css/)[0] + '">');
+</script>
 <style>
   html,body{margin:0;padding:0}
   body{width:1200px;height:630px;overflow:hidden;background:var(--color-paper);color:var(--color-ink);

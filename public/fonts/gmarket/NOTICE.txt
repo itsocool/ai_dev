@@ -1,0 +1,12 @@
+Gmarket Sans
+Copyright (C) Gmarket. All rights reserved.
+
+Provided free of charge by Gmarket for personal and commercial use.
+Redistribution is permitted only free of charge; selling the font files
+themselves is prohibited.
+
+Official source and full terms: https://corp.gmarket.com/fonts/
+
+The woff2 files here are subsets of the distributed font, sliced by
+unicode range so the browser downloads only the ranges a page renders.
+No outlines were modified.

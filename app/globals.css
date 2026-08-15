@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import "shadcn/tailwind.css";
-@import "./pretendard.css";
+@import "./gmarket.css";
 
 /* No dark mode: `dark:` utilities shipped by shadcn components never match. */
 @custom-variant dark (&:is(.dark *));
@@ -18,7 +18,7 @@
   --color-signal-dark: #0b39bd;
   --color-line: rgba(10, 10, 10, 0.72);
 
-  --font-sans: "Pretendard Variable", Pretendard, "Apple SD Gothic Neo", "Noto Sans KR", Arial, sans-serif;
+  --font-sans: "Gmarket Sans", "Apple SD Gothic Neo", "Noto Sans KR", Arial, sans-serif;
   --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 
   --spacing-gutter: clamp(1.25rem, 5vw, 5rem);

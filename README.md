@@ -103,20 +103,33 @@ Tailwind 기본 브레이크포인트를 `--breakpoint-*: initial` 로 **전부 
 
 ### 폰트
 
-기본 서체는 **Pretendard Variable** 이며 저장소에서 직접 호스팅한다. 외부 CDN 을 쓰지 않는다.
+기본 서체는 **Gmarket Sans** 이며 저장소에서 직접 호스팅한다. 외부 CDN 을 쓰지 않는다.
 
-- `public/fonts/pretendard/woff2-dynamic-subset/` — 서브셋 woff2 92개 (디스크 3.1MB)
-- `app/pretendard.css` — `@font-face` 92개. `globals.css` 가 `@import` 해서 번들 CSS 에 인라인된다.
+- `public/fonts/gmarket/woff2/` — 서브셋 woff2 185개
+- `app/gmarket.css` — `@font-face` 185개. `globals.css` 가 `@import` 해서 번들 CSS 에 인라인된다. **생성물이므로 직접 수정하지 말 것.**
+- `public/fonts/gmarket/NOTICE.txt` — 라이선스 고지. Gmarket 이 무료로 배포하며 상업적 사용이 가능하고, 폰트 파일 자체의 유료 판매만 금지된다.
 
-동적 서브셋이라 브라우저는 **실제로 렌더링되는 유니코드 범위만** 내려받는다. 현재 페이지 기준
-12개 조각 · 약 310KB 로, 단일 파일(2.0MB)을 쓸 때보다 훨씬 가볍다. `font-display: swap` 이므로
-폰트가 도착하기 전에는 폴백 스택(`Apple SD Gothic Neo` → `Noto Sans KR` → `Arial`)으로 즉시 렌더링된다.
+원본은 굵기별 단일 파일(woff 합계 1.8MB)이라 그대로 실으면 무겁다. 그래서 유니코드 범위 92개로
+잘라 `unicode-range` 로 물려두었고, 브라우저는 **실제로 렌더링되는 범위만** 받는다.
+현재 페이지 기준 **22조각 · 약 170KB** 다. `font-display: swap` 이라 도착 전에는 폴백 스택으로 렌더링된다.
 
-가변 폰트라 `font-weight: 45~920` 을 한 파일에서 모두 지원한다. 디자인이 쓰는 300/400/600/700/800
-이 전부 커버되므로 굵기별 파일을 추가할 필요가 없다.
+**굵기는 3종뿐이다 — Light 200 · Medium 500 · Bold 700.** 가변 폰트가 아니므로 디자인이 쓰는
+굵기는 CSS 굵기 매칭 규칙에 따라 아래로 접힌다. 가짜 볼드(합성)는 발생하지 않는다.
 
-서체를 교체한다면 `@theme` 의 `--font-sans` 와 위 두 경로를 함께 바꾼다. 히어로의 장식용 코드
-블록은 `--font-mono`(시스템 모노스페이스)를 계속 쓴다.
+| 디자인이 요청 | 실제 렌더 | 쓰이는 곳 |
+|---|---|---|
+| 300 (`font-light`) | Light 200 | 프로젝트 번호 01/02/03 |
+| 400 (기본) | Medium 500 | 본문 전체 |
+| 600 (`font-semibold`) | Bold 700 | Work 섹션 리드 문장 |
+| 700 / 800 | Bold 700 | 제목, 버튼, 라벨 |
+
+Light 는 숫자에만 쓰이므로 `U+0030-0039` 만 담은 1KB 짜리 조각 하나로 끝낸다.
+
+서체를 교체한다면 `@theme` 의 `--font-sans`, `app/gmarket.css`, `public/fonts/` 를 함께 바꾼다.
+히어로의 장식용 코드 블록은 `--font-mono`(시스템 모노스페이스)를 계속 쓴다.
+
+Gmarket Sans 는 Pretendard 보다 자폭이 넓어서 Work 섹션의 Stack 값처럼 긴 줄은 두 줄로 접힌다.
+레이아웃이 깨지지는 않지만, 문구를 늘릴 때는 1440px 에서 줄바꿈을 확인하는 편이 좋다.
 
 ### 한글 렌더링
 
