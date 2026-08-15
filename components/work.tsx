@@ -80,7 +80,7 @@ export default function Work() {
       {PROJECTS.map(({ number, title, summary, meta, outcome, mark }, i) => (
         <article
           key={number}
-          className={`grid min-h-[14.75rem] grid-cols-[8rem_minmax(19rem,1.55fr)_minmax(16rem,0.95fr)_minmax(12rem,0.75fr)_9rem] items-center border-t border-line py-12 max-xl:grid-cols-[5.5rem_minmax(0,1.3fr)_minmax(0,0.9fr)_minmax(0,0.7fr)] max-md:grid-cols-[3.5rem_1fr] max-md:items-start max-md:py-10 ${
+          className={`grid min-h-[14.75rem] grid-cols-[6.5rem_minmax(16rem,1fr)_fit-content(26rem)_fit-content(15rem)_7.5rem] items-center border-t border-line py-12 max-xl:grid-cols-[5.5rem_minmax(0,1.3fr)_minmax(0,0.9fr)_minmax(0,0.7fr)] max-md:grid-cols-[3.5rem_1fr] max-md:items-start max-md:py-10 ${
             i === PROJECTS.length - 1 ? "border-b" : ""
           }`}
         >
@@ -91,7 +91,7 @@ export default function Work() {
             {number}
           </p>
 
-          <div className="px-[clamp(1.5rem,3vw,3rem)] max-md:col-start-2 max-md:px-0 max-md:pl-5">
+          <div className="px-[clamp(1.25rem,2.2vw,2.5rem)] max-md:col-start-2 max-md:px-0 max-md:pl-5">
             <h3 className="text-[clamp(1.75rem,2.5vw,2.65rem)] font-bold leading-[1.12] tracking-[-0.045em] max-xs:text-[1.625rem]">
               {title[0]}
               <br />
@@ -100,7 +100,7 @@ export default function Work() {
             <p className="mt-[1.2rem] text-[0.9375rem] leading-[1.55]">{summary}</p>
           </div>
 
-          <dl className="flex flex-col justify-center gap-6 self-stretch border-r border-line px-[clamp(1.25rem,2vw,2rem)] max-md:col-start-2 max-md:mt-8 max-md:grid max-md:grid-cols-[1fr] max-md:gap-4 max-md:border-r-0 max-md:px-0 max-md:pl-5">
+          <dl className="flex flex-col justify-center gap-6 self-stretch border-r border-line px-[clamp(1rem,1.5vw,1.5rem)] max-md:col-start-2 max-md:mt-8 max-md:grid max-md:grid-cols-[1fr] max-md:gap-4 max-md:border-r-0 max-md:px-0 max-md:pl-5">
             {meta.map(([term, value]) => (
               <div key={term}>
                 <dt className="mb-[0.55rem] text-[0.75rem] uppercase">{term}</dt>
@@ -109,7 +109,7 @@ export default function Work() {
             ))}
           </dl>
 
-          <div className="pl-[clamp(1.5rem,3vw,2.5rem)] text-signal max-md:col-start-2 max-md:mt-8 max-md:px-0 max-md:pl-5">
+          <div className="pl-[clamp(1.5rem,3vw,2.5rem)] pr-[clamp(1rem,2vw,2rem)] text-signal max-md:col-start-2 max-md:mt-8 max-md:px-0 max-md:pl-5">
             <p className="mb-[0.9rem] text-[0.75rem] font-bold">예시 성과</p>
             <strong className="text-[clamp(1.6rem,2.2vw,2.35rem)] font-bold leading-[1.15] tracking-[-0.04em]">
               {outcome.lead}
