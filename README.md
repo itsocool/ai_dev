@@ -94,6 +94,23 @@ Tailwind 기본 브레이크포인트를 `--breakpoint-*: initial` 로 **전부 
 > **주의:** `sm:` `lg:` `2xl:` 등은 존재하지 않는다. 쓰면 오류 없이 **조용히 무시**된다.
 > 이 디자인은 데스크톱 기준으로 좁혀가는 방식이라 `max-*` 만 쓴다.
 
+### 폰트
+
+기본 서체는 **Pretendard Variable** 이며 저장소에서 직접 호스팅한다. 외부 CDN 을 쓰지 않는다.
+
+- `public/fonts/pretendard/woff2-dynamic-subset/` — 서브셋 woff2 92개 (디스크 3.1MB)
+- `app/pretendard.css` — `@font-face` 92개. `globals.css` 가 `@import` 해서 번들 CSS 에 인라인된다.
+
+동적 서브셋이라 브라우저는 **실제로 렌더링되는 유니코드 범위만** 내려받는다. 현재 페이지 기준
+12개 조각 · 약 310KB 로, 단일 파일(2.0MB)을 쓸 때보다 훨씬 가볍다. `font-display: swap` 이므로
+폰트가 도착하기 전에는 폴백 스택(`Apple SD Gothic Neo` → `Noto Sans KR` → `Arial`)으로 즉시 렌더링된다.
+
+가변 폰트라 `font-weight: 45~920` 을 한 파일에서 모두 지원한다. 디자인이 쓰는 300/400/600/700/800
+이 전부 커버되므로 굵기별 파일을 추가할 필요가 없다.
+
+서체를 교체한다면 `@theme` 의 `--font-sans` 와 위 두 경로를 함께 바꾼다. 히어로의 장식용 코드
+블록은 `--font-mono`(시스템 모노스페이스)를 계속 쓴다.
+
 ### dot-grid
 
 원본의 점 패턴은 Tailwind 유틸리티로 표현할 수 없어 `globals.css` 에 `@utility dot-grid` 로 남겼다.
