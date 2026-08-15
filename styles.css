@@ -56,8 +56,12 @@ dd {
 }
 
 :focus-visible {
-  outline: 3px solid #ffcc00;
+  outline: 3px solid var(--ink);
   outline-offset: 4px;
+}
+
+.contact :focus-visible {
+  outline-color: var(--paper);
 }
 
 .site-header {
@@ -282,7 +286,7 @@ nav a:hover {
 
 .dot-grid,
 .project-mark-dots {
-  background-image: radial-gradient(var(--ink) 1px, transparent 1px);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Ccircle cx='1' cy='1' r='1' fill='%230a0a0a'/%3E%3C/svg%3E");
   background-size: 0.75rem 0.75rem;
 }
 
@@ -653,19 +657,46 @@ footer span {
 
 @media (max-width: 1100px) {
   .hero {
-    grid-template-columns: 1fr 0.7fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.7fr);
   }
 
   .hero-visual {
-    min-height: 28rem;
+    min-height: 0;
+  }
+
+  .hero-actions .button {
+    min-width: 0;
+    padding-inline: 1rem;
+    flex: 1;
   }
 
   .project {
-    grid-template-columns: 5.5rem minmax(17rem, 1.3fr) minmax(14rem, 0.9fr) minmax(11rem, 0.7fr);
+    grid-template-columns: 5.5rem minmax(0, 1.3fr) minmax(0, 0.9fr) minmax(0, 0.7fr);
   }
 
   .project-mark {
     display: none;
+  }
+
+  .project:last-child .outcome em {
+    white-space: normal;
+  }
+
+  .capabilities {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .capabilities li {
+    padding-right: 1rem;
+    grid-template-columns: 3rem minmax(0, 1fr);
+  }
+
+  .capabilities li + li {
+    padding-left: 1rem;
+  }
+
+  .capabilities div {
+    padding-left: 1rem;
   }
 
   .contact-grid {
