@@ -32,6 +32,13 @@ npx tsc --noEmit
 npx serve out    # 또는: python3 -m http.server 4321 --directory out
 ```
 
+### dev 서버 403 (Unauthorized)
+
+`next dev` 는 `/_next/*` 를 `localhost` 에서만 서빙하고 다른 Origin 은 403 으로 막는다.
+브라우저 주소창에 `127.0.0.1:3000` 을 치면 청크가 전부 403 이 되고 HMR 웹소켓도 끊긴다.
+`next.config.ts` 의 `allowedDevOrigins` 에 그 호스트를 추가하면 된다 (LAN IP, 터널 도메인도 동일).
+이 옵션은 dev 전용이라 `next build` 산출물에는 영향이 없다.
+
 ---
 
 ## 구조
