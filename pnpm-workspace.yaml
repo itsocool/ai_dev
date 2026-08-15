@@ -1,0 +1,10 @@
+# pnpm 11 reads settings from here, not from package.json's "pnpm" field.
+#
+# unrs-resolver's postinstall only exists to fetch a native binding as a
+# fallback. pnpm already installs that binding through the platform
+# optional dependency (@unrs/resolver-binding-*), so the script has
+# nothing to do. Left unanswered, pnpm treats it as a pending approval
+# and every `pnpm install` / `pnpm run` exits non-zero, so the decision
+# is recorded explicitly here. Regenerate with `pnpm approve-builds`.
+allowBuilds:
+  unrs-resolver: false

@@ -19,18 +19,29 @@ Next.js App Router 를 정적 export 로 빌드한 단일 페이지다. 서버 �
 ## 시작하기
 
 ```bash
-npm ci
-npm run dev     # http://localhost:3000
-npm run build   # 정적 산출물 -> out/
-npm run lint
-npx tsc --noEmit
+pnpm install --frozen-lockfile
+pnpm dev     # http://localhost:3000
+pnpm build   # 정적 산출물 -> out/
+pnpm lint
+pnpm exec tsc --noEmit
 ```
 
-`npm run build` 는 `out/` 에 완성된 정적 사이트를 만든다. 산출물을 그대로 확인하려면:
+`pnpm build` 는 `out/` 에 완성된 정적 사이트를 만든다. 산출물을 그대로 확인하려면:
 
 ```bash
-npx serve out    # 또는: python3 -m http.server 4321 --directory out
+pnpm dlx serve out   # 또는: python3 -m http.server 4321 --directory out
 ```
+
+### 패키지 관리
+
+**pnpm 을 쓴다.** npm 으로 설치하면 `pnpm-lock.yaml` 과 어긋나므로 쓰지 말 것.
+
+- 버전은 `package.json` 의 `packageManager` 에 고정돼 있고, CI 의 `pnpm/action-setup` 이 그 값을 읽는다.
+- **Node 22.13 이상이 필요하다** (pnpm 11 의 요구사항). CI 는 Node 24 를 쓴다.
+- `pnpm-workspace.yaml` 의 `allowBuilds` 는 설치 시 스크립트 실행을 허용/거부할 패키지 목록이다.
+  pnpm 은 답하지 않은 항목이 있으면 `pnpm install` 과 `pnpm run` 을 **종료 코드 1 로 끝내므로**
+  이 파일이 비면 CI 가 깨진다. 새 의존성을 추가한 뒤 `ERR_PNPM_IGNORED_BUILDS` 가 뜨면
+  `pnpm approve-builds` 를 돌려 목록을 갱신한다.
 
 ### dev 서버 403 (Unauthorized)
 
