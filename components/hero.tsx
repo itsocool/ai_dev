@@ -42,7 +42,7 @@ export default function Hero() {
           </Button>
         </div>
         <p className="mt-9 max-w-[48rem] border-t border-line pt-[1.15rem] text-base max-md:leading-[1.6]">
-          LLM · RAG · Product Engineering
+          LLM · RAG · AI Agent · Product Engineering
         </p>
       </div>
 
