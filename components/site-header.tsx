@@ -10,7 +10,7 @@ export default function SiteHeader() {
       </a>
       <nav
         aria-label="주요 메뉴"
-        className="flex gap-[clamp(1.5rem,5vw,4.75rem)] text-[1.05rem] max-md:gap-[1.2rem] max-md:text-[0.88rem] max-xs:gap-[0.9rem] max-xs:text-[0.82rem]"
+        className="flex gap-[clamp(1.5rem,5vw,4.75rem)] text-[1.0625rem] max-md:gap-[1.2rem] max-md:text-[0.875rem] max-xs:gap-[0.9rem] max-xs:text-[0.8125rem]"
       >
         <a className="border-b border-transparent py-2 hover:border-signal" href="#work">
           Work

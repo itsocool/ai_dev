@@ -3,9 +3,9 @@ export default function Contact() {
     <section
       id="contact"
       aria-labelledby="contact-title"
-      className="bg-signal px-gutter pt-10 pb-16 text-paper max-md:pt-12"
+      className="antialiased bg-signal px-gutter pt-10 pb-16 text-paper max-md:pt-12"
     >
-      <p className="mb-[1.65rem] text-[0.78rem] font-extrabold uppercase text-paper">
+      <p className="mb-[1.65rem] text-[0.75rem] font-extrabold uppercase text-paper">
         Contact
       </p>
 
@@ -19,7 +19,7 @@ export default function Contact() {
           이야기해 주세요.
         </h2>
 
-        <p className="border-l border-[rgba(245,242,235,0.75)] pl-10 text-[1.05rem] leading-[1.65] max-md:border-t max-md:border-l-0 max-md:pt-6 max-md:pl-0">
+        <p className="border-l border-[rgba(245,242,235,0.75)] pl-10 text-[1.0625rem] leading-[1.65] max-md:border-t max-md:border-l-0 max-md:pt-6 max-md:pl-0">
           AI 제품을 만드는 팀과의
           <br />
           대화를 기다립니다.

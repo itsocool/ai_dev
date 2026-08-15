@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
    `outline-none`, which pins `--tw-outline-style: none`, so `focus-visible:outline-3` alone would
    resolve to `outline-style: none` and kill the global `:focus-visible` ring. */
 const cta =
-  "h-auto min-h-[4.15rem] min-w-60 shrink justify-between rounded-none border px-8 text-[1.08rem] font-bold transition-[color,background-color] duration-[160ms] ease-[ease] active:not-aria-[haspopup]:translate-y-0 focus-visible:ring-0 focus-visible:outline-offset-4 focus-visible:[outline:3px_solid_var(--color-ink)] max-xl:min-w-0 max-xl:flex-1 max-xl:px-4 max-md:w-full max-md:min-w-0";
+  "h-auto min-h-[4.15rem] min-w-60 shrink justify-between rounded-none border px-8 text-[1.0625rem] font-bold transition-[color,background-color] duration-[160ms] ease-[ease] active:not-aria-[haspopup]:translate-y-0 focus-visible:ring-0 focus-visible:outline-offset-4 focus-visible:[outline:3px_solid_var(--color-ink)] max-xl:min-w-0 max-xl:flex-1 max-xl:px-4 max-md:w-full max-md:min-w-0";
 
 const arrow = "text-[1.75em] font-light";
 

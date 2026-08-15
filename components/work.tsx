@@ -64,7 +64,7 @@ export default function Work() {
         >
           Selected Work
         </h2>
-        <p className="text-[1.1rem] font-semibold leading-[1.55] max-md:mt-8">
+        <p className="text-[1.125rem] font-semibold leading-[1.55] max-md:mt-8">
           문제를 정의하고,
           <br />
           모델을 연결하고, 제품으로 완성한 작업입니다.
@@ -86,25 +86,25 @@ export default function Work() {
         >
           <p
             aria-hidden="true"
-            className="flex items-center self-stretch border-r border-line text-[clamp(3rem,5vw,5.5rem)] font-light leading-none max-md:pt-1 max-md:text-[1.8rem]"
+            className="flex items-center self-stretch border-r border-line text-[clamp(3rem,5vw,5.5rem)] font-light leading-none max-md:pt-1 max-md:text-[1.8125rem]"
           >
             {number}
           </p>
 
           <div className="px-[clamp(1.5rem,3vw,3rem)] max-md:col-start-2 max-md:px-0 max-md:pl-5">
-            <h3 className="text-[clamp(1.75rem,2.5vw,2.65rem)] font-bold leading-[1.12] tracking-[-0.045em] max-xs:text-[1.65rem]">
+            <h3 className="text-[clamp(1.75rem,2.5vw,2.65rem)] font-bold leading-[1.12] tracking-[-0.045em] max-xs:text-[1.625rem]">
               {title[0]}
               <br />
               {title[1]}
             </h3>
-            <p className="mt-[1.2rem] text-[0.95rem] leading-[1.55]">{summary}</p>
+            <p className="mt-[1.2rem] text-[0.9375rem] leading-[1.55]">{summary}</p>
           </div>
 
           <dl className="flex flex-col justify-center gap-6 self-stretch border-r border-line px-[clamp(1.25rem,2vw,2rem)] max-md:col-start-2 max-md:mt-8 max-md:grid max-md:grid-cols-[1fr] max-md:gap-4 max-md:border-r-0 max-md:px-0 max-md:pl-5">
             {meta.map(([term, value]) => (
               <div key={term}>
-                <dt className="mb-[0.55rem] text-[0.72rem] uppercase">{term}</dt>
-                <dd className="text-[0.94rem] leading-[1.5]">{value}</dd>
+                <dt className="mb-[0.55rem] text-[0.75rem] uppercase">{term}</dt>
+                <dd className="text-[0.9375rem] leading-[1.5]">{value}</dd>
               </div>
             ))}
           </dl>

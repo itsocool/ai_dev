@@ -80,7 +80,7 @@
     background: var(--color-paper);
     font-family: var(--font-sans);
     overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
+    text-size-adjust: 100%;
   }
 
   a {

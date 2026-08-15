@@ -13,7 +13,7 @@ export default function About() {
     >
       <div className="grid grid-cols-[1.35fr_0.65fr] gap-20 max-md:grid-cols-1 max-md:gap-12">
         <div>
-          <p className="mb-[1.65rem] text-[0.78rem] font-extrabold uppercase text-signal">
+          <p className="mb-[1.65rem] text-[0.75rem] font-extrabold uppercase text-signal">
             About
           </p>
           <h2
@@ -50,10 +50,10 @@ export default function About() {
                 : "")
             }
           >
-            <span className="text-[1.45rem]">{item.no}</span>
+            <span className="text-[1.4375rem]">{item.no}</span>
             <div className="border-l border-line pl-10 max-xl:pl-4">
-              <h3 className="text-[1.05rem] font-bold">{item.title}</h3>
-              <p className="mt-[0.9rem] text-[0.9rem]">{item.body}</p>
+              <h3 className="text-[1.0625rem] font-bold">{item.title}</h3>
+              <p className="mt-[0.9rem] text-[0.875rem]">{item.body}</p>
             </div>
           </li>
         ))}
