@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="AI를 실제 제품으로 만드는 개발자 김도윤의 프로젝트와 역량을 소개합니다.">
+    <title>김도윤 — AI Product Engineer</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문으로 바로가기</a>
+
+    <header class="site-header">
+      <a class="brand" href="#main" aria-label="김도윤 포트폴리오 홈">김도윤</a>
+      <nav aria-label="주요 메뉴">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <h1 id="hero-title">AI를 실제<br>제품으로 만드는<br>개발자</h1>
+          <p class="hero-intro">모델의 가능성을 사용자 가치로 연결합니다. <br>데이터부터 배포까지, 작동하는 AI 제품을 설계하고 만듭니다.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="mailto:hello@doyoon.dev">면접 제안하기 <span aria-hidden="true">→</span></a>
+            <a class="button button-secondary" href="#work">프로젝트 보기 <span aria-hidden="true">→</span></a>
+          </div>
+          <p class="expertise">LLM · RAG · MLOps · Product Engineering</p>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="code code-top">
+            <span><b>def</b> build_ai_product():</span>
+            <span>&nbsp;&nbsp;data = collect()</span>
+            <span>&nbsp;&nbsp;model = train(data)</span>
+            <span>&nbsp;&nbsp;index = embed(model)</span>
+            <span>&nbsp;&nbsp;result = retrieve(index)</span>
+            <span>&nbsp;&nbsp;answer = generate(model, result)</span>
+            <span>&nbsp;&nbsp;<b>return</b> answer</span>
+          </div>
+          <div class="cross cross-top"><i></i></div>
+          <div class="blue-block block-top"></div>
+          <div class="index-list">01<br>02<br>03<br>04<br>05<br>06<br><br>07<br>08<br>09</div>
+          <div class="code code-bottom">
+            <span><b>for</b> user <b>in</b> users:</span>
+            <span>&nbsp;&nbsp;value = ai(user.input)</span>
+            <span>&nbsp;&nbsp;deliver(value)<i></i></span>
+          </div>
+          <div class="dot-grid"></div>
+          <div class="cross cross-bottom"><i></i></div>
+          <div class="arc"></div>
+          <div class="blue-block block-bottom"></div>
+        </div>
+      </section>
+
+      <section class="work section" id="work" aria-labelledby="work-title">
+        <div class="section-heading work-heading">
+          <h2 id="work-title">Selected Work</h2>
+          <p>문제를 정의하고,<br>모델을 연결하고, 제품으로 완성한 작업입니다.</p>
+          <span class="heading-mark" aria-hidden="true"></span>
+        </div>
+
+        <article class="project">
+          <p class="project-number" aria-hidden="true">01</p>
+          <div class="project-summary">
+            <h3>사내 지식 검색을 바꾼<br>RAG Assistant</h3>
+            <p>검색 실패율을 낮추고 답변 근거를 투명하게 만든 검색 경험</p>
+          </div>
+          <dl class="project-meta">
+            <div><dt>Role</dt><dd>AI Engineer · Product Owner</dd></div>
+            <div><dt>Stack</dt><dd>Python · FastAPI · OpenAI · Qdrant</dd></div>
+          </dl>
+          <div class="outcome">
+            <p>예시 성과</p>
+            <strong>검색 성공률<br><em>34%</em> 향상</strong>
+          </div>
+          <div class="project-mark project-mark-block" aria-hidden="true"></div>
+        </article>
+
+        <article class="project">
+          <p class="project-number" aria-hidden="true">02</p>
+          <div class="project-summary">
+            <h3>상담 품질을 높인<br>Conversation Copilot</h3>
+            <p>실시간 추천과 요약으로 상담원의 판단을 돕는 AI 도구</p>
+          </div>
+          <dl class="project-meta">
+            <div><dt>Role</dt><dd>ML Engineer</dd></div>
+            <div><dt>Stack</dt><dd>TypeScript · LangGraph · PostgreSQL</dd></div>
+          </dl>
+          <div class="outcome">
+            <p>예시 성과</p>
+            <strong>후처리 시간<br><em>41%</em> 단축</strong>
+          </div>
+          <div class="project-mark project-mark-arc" aria-hidden="true"></div>
+        </article>
+
+        <article class="project">
+          <p class="project-number" aria-hidden="true">03</p>
+          <div class="project-summary">
+            <h3>모델 운영을 단순화한<br>Evaluation Pipeline</h3>
+            <p>프롬프트와 모델 변경을 같은 기준으로 비교하는 자동 평가 시스템</p>
+          </div>
+          <dl class="project-meta">
+            <div><dt>Role</dt><dd>AI Platform Engineer</dd></div>
+            <div><dt>Stack</dt><dd>Python · Docker · GitHub Actions</dd></div>
+          </dl>
+          <div class="outcome">
+            <p>예시 성과</p>
+            <strong>배포 검증<br><em>3시간→18분</em></strong>
+          </div>
+          <div class="project-mark project-mark-dots" aria-hidden="true"></div>
+        </article>
+      </section>
+
+      <section class="about section" id="about" aria-labelledby="about-title">
+        <div class="about-intro">
+          <div>
+            <p class="section-label">About</p>
+            <h2 id="about-title">좋은 AI는<br>모델 밖에서 완성됩니다.</h2>
+            <p class="about-copy">정확한 문제 정의, 신뢰할 수 있는 데이터, 빠른 실험, 안정적인 운영까지 <br>함께 설계합니다. 기술을 설명하는 데서 멈추지 않고 <br>팀이 사용할 수 있는 제품으로 만듭니다.</p>
+          </div>
+          <span class="about-mark" aria-hidden="true"></span>
+        </div>
+
+        <ol class="capabilities">
+          <li><span>01</span><div><h3>Applied AI</h3><p>LLM · RAG 설계와 평가</p></div></li>
+          <li><span>02</span><div><h3>Product Engineering</h3><p>API부터 관측 가능한 배포까지</p></div></li>
+          <li><span>03</span><div><h3>Collaboration</h3><p>복잡한 기술을 명확한 결정으로</p></div></li>
+        </ol>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <p class="section-label">Contact</p>
+        <div class="contact-grid">
+          <h2 id="contact-title">함께 만들 다음 문제를<br>이야기해 주세요.</h2>
+          <p>AI 제품을 만드는 팀과의<br>대화를 기다립니다.</p>
+          <a class="contact-email" href="mailto:hello@doyoon.dev">hello@doyoon.dev</a>
+          <a class="contact-action" href="mailto:hello@doyoon.dev">면접 제안하기 <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>김도윤 · AI Product Engineer</p>
+      <span aria-hidden="true"></span>
+      <p>Seoul · 2026</p>
+    </footer>
+  </body>
+</html>
